@@ -1,0 +1,36 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: order-batch
+  description: Sample service with CI/CD
+  annotations:
+    devlake.io/project-name: order-batch
+    github.com/project-slug: devops-champ/order-batch
+    backstage.io/techdocs-ref: dir:.
+    sonarqube.org/project-key: devops-champ_order-batch
+    roadie-backstage-pull-requests/default-filter: "is:open is:pr"
+    platform.io/argocd-dev: order-batch-dev
+    platform.io/argocd-qa: order-batch-qa
+    platform.io/argocd-prod: order-batch-prod
+    grafana/log-namespace: order-batch-dev
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:default/platform-team
+  dependsOn:
+    - resource:default/orders-db
+    - resource:default/kafka-cluster
+  platform:
+    AppId: ORDER-1223435
+    ApprovedJiraId: CORE-2
+    BusinessUnit: Retail
+    SupportTeam: DEVOPS
+    CloudBudgetTicket: CR-125
+  infrastructure:
+    environments:
+      - name: dev
+        projectId: devops-champ
+      - name: qa
+        projectId: devops-champ
+      - name: prod  
+        projectId: devops-champ
