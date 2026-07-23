@@ -7,6 +7,9 @@ metadata:
     - url: http://35.207.209.61/order-batch-dev/actuator/health
       title: order-batch-dev
       icon: web
+    - url: http://34.180.34.240/
+      title: Grafana Dashboard
+      icon: dashboard
   annotations:
     devlake.io/project-name: order-batch
     github.com/project-slug: devops-champ/order-batch
