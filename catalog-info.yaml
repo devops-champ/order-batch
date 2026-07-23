@@ -3,6 +3,10 @@ kind: Component
 metadata:
   name: order-batch
   description: Sample service with CI/CD
+  links:
+    - url: http://35.207.209.61/order-batch-dev/actuator/health
+      title: order-batch-dev
+      icon: web
   annotations:
     devlake.io/project-name: order-batch
     github.com/project-slug: devops-champ/order-batch
