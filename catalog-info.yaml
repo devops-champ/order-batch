@@ -36,8 +36,8 @@ spec:
   infrastructure:
     environments:
       - name: dev
-        projectId: devops-champ
+        projectId: mcp-project-504809
       - name: qa
-        projectId: devops-champ
+        projectId: mcp-project-504809
       - name: prod  
-        projectId: devops-champ
+        projectId: mcp-project-504809
